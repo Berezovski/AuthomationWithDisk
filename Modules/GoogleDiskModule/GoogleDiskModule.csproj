@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Components\GoogleDisk\GoogleDisk.csproj" />
+    <ProjectReference Include="..\..\DryIoc\Authomation.DI.Modules\Authomation.DI.Modules.csproj" />
+  </ItemGroup>
+
+</Project>

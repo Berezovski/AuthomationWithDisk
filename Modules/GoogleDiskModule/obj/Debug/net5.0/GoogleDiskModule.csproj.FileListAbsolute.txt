@@ -1,0 +1,17 @@
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\bin\Debug\net5.0\GoogleDiskModule.deps.json
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\bin\Debug\net5.0\GoogleDiskModule.dll
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\bin\Debug\net5.0\ref\GoogleDiskModule.dll
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\bin\Debug\net5.0\GoogleDiskModule.pdb
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\bin\Debug\net5.0\Disk.dll
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\bin\Debug\net5.0\GoogleDisk.dll
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\bin\Debug\net5.0\Disk.pdb
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\bin\Debug\net5.0\GoogleDisk.pdb
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\net5.0\GoogleDiskModule.csproj.AssemblyReference.cache
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\net5.0\GoogleDiskModule.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\net5.0\GoogleDiskModule.AssemblyInfoInputs.cache
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\net5.0\GoogleDiskModule.AssemblyInfo.cs
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\net5.0\GoogleDiskModule.csproj.CoreCompileInputs.cache
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\net5.0\GoogleDiskModule.csproj.CopyComplete
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\net5.0\GoogleDiskModule.dll
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\net5.0\ref\GoogleDiskModule.dll
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\net5.0\GoogleDiskModule.pdb

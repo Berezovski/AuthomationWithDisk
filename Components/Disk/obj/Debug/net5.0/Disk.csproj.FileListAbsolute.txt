@@ -1,0 +1,11 @@
+D:\VisualStudio_Projects\Authomation\Components\Disk\bin\Debug\net5.0\Disk.deps.json
+D:\VisualStudio_Projects\Authomation\Components\Disk\bin\Debug\net5.0\Disk.dll
+D:\VisualStudio_Projects\Authomation\Components\Disk\bin\Debug\net5.0\ref\Disk.dll
+D:\VisualStudio_Projects\Authomation\Components\Disk\bin\Debug\net5.0\Disk.pdb
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net5.0\Disk.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net5.0\Disk.AssemblyInfoInputs.cache
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net5.0\Disk.AssemblyInfo.cs
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net5.0\Disk.csproj.CoreCompileInputs.cache
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net5.0\Disk.dll
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net5.0\ref\Disk.dll
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net5.0\Disk.pdb

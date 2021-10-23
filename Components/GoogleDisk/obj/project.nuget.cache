@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "FuW0J6nb2Jvlqb+1grwdpwcFVpWPPoa6+rQXEhDff+WTBfV3LH7DDO9QfEkVzQJRbvGZ4CLVvJF9gYXaUORh2g==",
+  "success": true,
+  "projectFilePath": "D:\\VisualStudio_Projects\\Authomation\\Components\\GoogleDisk\\GoogleDisk.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sashu\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
+    "C:\\Users\\sashu\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\sashu\\.nuget\\packages\\microsoft.extensions.configuration.binder\\5.0.0\\microsoft.extensions.configuration.binder.5.0.0.nupkg.sha512",
+    "C:\\Users\\sashu\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\sashu\.nuget\packages\</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.11.1</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="C:\Users\sashu\.nuget\packages\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Compile Include="$(NuGetPackageRoot)dryioc\4.8.3\contentFiles\cs\netstandard2.0\DryIoc\Container.cs" Condition="Exists('$(NuGetPackageRoot)dryioc\4.8.3\contentFiles\cs\netstandard2.0\DryIoc\Container.cs')">
+      <NuGetPackageId>DryIoc</NuGetPackageId>
+      <NuGetPackageVersion>4.8.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>DryIoc\Container.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)dryioc\4.8.3\contentFiles\cs\netstandard2.0\DryIoc\Expression.cs" Condition="Exists('$(NuGetPackageRoot)dryioc\4.8.3\contentFiles\cs\netstandard2.0\DryIoc\Expression.cs')">
+      <NuGetPackageId>DryIoc</NuGetPackageId>
+      <NuGetPackageVersion>4.8.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>DryIoc\Expression.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)dryioc\4.8.3\contentFiles\cs\netstandard2.0\DryIoc\FastExpressionCompiler.cs" Condition="Exists('$(NuGetPackageRoot)dryioc\4.8.3\contentFiles\cs\netstandard2.0\DryIoc\FastExpressionCompiler.cs')">
+      <NuGetPackageId>DryIoc</NuGetPackageId>
+      <NuGetPackageVersion>4.8.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>DryIoc\FastExpressionCompiler.cs</Link>
+    </Compile>
+    <Compile Include="$(NuGetPackageRoot)dryioc\4.8.3\contentFiles\cs\netstandard2.0\DryIoc\ImTools.cs" Condition="Exists('$(NuGetPackageRoot)dryioc\4.8.3\contentFiles\cs\netstandard2.0\DryIoc\ImTools.cs')">
+      <NuGetPackageId>DryIoc</NuGetPackageId>
+      <NuGetPackageVersion>4.8.3</NuGetPackageVersion>
+      <NuGetItemType>Compile</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>DryIoc\ImTools.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)dryioc\4.8.3\build\DryIoc.props" Condition="Exists('$(NuGetPackageRoot)dryioc\4.8.3\build\DryIoc.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgDryIoc Condition=" '$(PkgDryIoc)' == '' ">C:\Users\sashu\.nuget\packages\dryioc\4.8.3</PkgDryIoc>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,8 @@
+D:\VisualStudio_Projects\Authomation\DryIocModules\obj\Debug\net48\DryIocModules.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio_Projects\Authomation\DryIocModules\obj\Debug\net48\DryIocModules.AssemblyInfoInputs.cache
+D:\VisualStudio_Projects\Authomation\DryIocModules\obj\Debug\net48\DryIocModules.AssemblyInfo.cs
+D:\VisualStudio_Projects\Authomation\DryIocModules\obj\Debug\net48\DryIocModules.csproj.CoreCompileInputs.cache
+D:\VisualStudio_Projects\Authomation\DryIocModules\bin\Debug\net48\DryIocModules.dll
+D:\VisualStudio_Projects\Authomation\DryIocModules\bin\Debug\net48\DryIocModules.pdb
+D:\VisualStudio_Projects\Authomation\DryIocModules\obj\Debug\net48\DryIocModules.dll
+D:\VisualStudio_Projects\Authomation\DryIocModules\obj\Debug\net48\DryIocModules.pdb

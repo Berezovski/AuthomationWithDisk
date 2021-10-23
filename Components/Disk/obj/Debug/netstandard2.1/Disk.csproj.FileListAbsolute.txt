@@ -1,0 +1,10 @@
+D:\VisualStudio_Projects\Authomation\Components\Disk\bin\Debug\netstandard2.1\Disk.deps.json
+D:\VisualStudio_Projects\Authomation\Components\Disk\bin\Debug\netstandard2.1\Disk.dll
+D:\VisualStudio_Projects\Authomation\Components\Disk\bin\Debug\netstandard2.1\Disk.pdb
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\netstandard2.1\Disk.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\netstandard2.1\Disk.AssemblyInfoInputs.cache
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\netstandard2.1\Disk.AssemblyInfo.cs
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\netstandard2.1\Disk.csproj.CoreCompileInputs.cache
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\netstandard2.1\Disk.dll
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\netstandard2.1\Disk.pdb
+D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\netstandard2.1\Disk.csproj.AssemblyReference.cache
