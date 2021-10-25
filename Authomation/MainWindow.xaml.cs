@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using Disk.Interfaces;
 using DryIoc;
+using WinLogger;
 
 namespace Authomation
 {
@@ -14,12 +15,22 @@ namespace Authomation
         public MainWindow()
         {
             InitializeComponent();
+            new LogUploader(logConsole,scrollLogConsole);
+            LogUploader.LogInformation("Запуск службы конфигурации...");
             var config = Startup.BuildConfiguration();
 
+            LogUploader.LogInformation("Регистрация конфигураций...");
             Container.RegisterInstance(config);
+
+            LogUploader.LogInformation("Добавление модулей...");
             Container.AddModules();
+
+            LogUploader.LogSuccess("Успешно...");
+
             //не работает
             IDiskUploader diskUploader = Container.Resolve<IDiskUploader>();
         }
+
+
     }
 }

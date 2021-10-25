@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authomation", "Authomation\Authomation.csproj", "{BCC1BE20-0F97-425F-A625-C94FE529DC0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authomation", "Authomation\Authomation.csproj", "{BCC1BE20-0F97-425F-A625-C94FE529DC0F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{8D0324DC-636C-4CB4-91E4-EE2B4CBE74FC}"
 EndProject
@@ -17,9 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleDiskModule", "Modules
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DryIoC", "DryIoC", "{17BC1D36-492E-4914-99B5-94BFC77A8A91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authomation.DI.Modules", "DryIoc\Authomation.DI.Modules\Authomation.DI.Modules.csproj", "{9B7FFBF3-3B17-43CD-AADF-B78073992B9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authomation.DI.Modules", "DryIoc\Authomation.DI.Modules\Authomation.DI.Modules.csproj", "{9B7FFBF3-3B17-43CD-AADF-B78073992B9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authomation.DI.Extensions", "DryIoc\Authomation.DI.Extensions\Authomation.DI.Extensions.csproj", "{F6EE32B7-96C6-4121-88C6-630467A2024A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authomation.DI.Extensions", "DryIoc\Authomation.DI.Extensions\Authomation.DI.Extensions.csproj", "{F6EE32B7-96C6-4121-88C6-630467A2024A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinLogger", "WinLogger\WinLogger.csproj", "{B9DEE235-C86E-42EC-BB48-1B2D5AD6DA74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinLogger", "WinLogger", "{D037B48C-F6A9-48E9-9869-5DBB10D0CFF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,10 @@ Global
 		{F6EE32B7-96C6-4121-88C6-630467A2024A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6EE32B7-96C6-4121-88C6-630467A2024A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6EE32B7-96C6-4121-88C6-630467A2024A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9DEE235-C86E-42EC-BB48-1B2D5AD6DA74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9DEE235-C86E-42EC-BB48-1B2D5AD6DA74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9DEE235-C86E-42EC-BB48-1B2D5AD6DA74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9DEE235-C86E-42EC-BB48-1B2D5AD6DA74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +69,7 @@ Global
 		{9D229980-E055-4F1D-95CF-C5D63594E9BF} = {E7C0F7B1-40BF-4A19-AF1D-1B8A1A7C9467}
 		{9B7FFBF3-3B17-43CD-AADF-B78073992B9F} = {17BC1D36-492E-4914-99B5-94BFC77A8A91}
 		{F6EE32B7-96C6-4121-88C6-630467A2024A} = {17BC1D36-492E-4914-99B5-94BFC77A8A91}
+		{B9DEE235-C86E-42EC-BB48-1B2D5AD6DA74} = {D037B48C-F6A9-48E9-9869-5DBB10D0CFF4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21525DE5-FBA2-4642-83DA-7D7E3FDF5312}

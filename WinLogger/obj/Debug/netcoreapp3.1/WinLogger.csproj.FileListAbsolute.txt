@@ -1,0 +1,10 @@
+D:\VisualStudio_Projects\Authomation\WinLogger\obj\Debug\netcoreapp3.1\WinLogger.csproj.AssemblyReference.cache
+D:\VisualStudio_Projects\Authomation\WinLogger\obj\Debug\netcoreapp3.1\WinLogger.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio_Projects\Authomation\WinLogger\obj\Debug\netcoreapp3.1\WinLogger.AssemblyInfoInputs.cache
+D:\VisualStudio_Projects\Authomation\WinLogger\obj\Debug\netcoreapp3.1\WinLogger.AssemblyInfo.cs
+D:\VisualStudio_Projects\Authomation\WinLogger\obj\Debug\netcoreapp3.1\WinLogger.csproj.CoreCompileInputs.cache
+D:\VisualStudio_Projects\Authomation\WinLogger\bin\Debug\netcoreapp3.1\WinLogger.deps.json
+D:\VisualStudio_Projects\Authomation\WinLogger\bin\Debug\netcoreapp3.1\WinLogger.dll
+D:\VisualStudio_Projects\Authomation\WinLogger\bin\Debug\netcoreapp3.1\WinLogger.pdb
+D:\VisualStudio_Projects\Authomation\WinLogger\obj\Debug\netcoreapp3.1\WinLogger.dll
+D:\VisualStudio_Projects\Authomation\WinLogger\obj\Debug\netcoreapp3.1\WinLogger.pdb

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Authomation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="1200">
 
     <Window.Resources>
     <FontFamily x:Key="commonFont">Verdana</FontFamily>
@@ -53,14 +53,25 @@
         </MenuItem>
     </Menu>
     <DockPanel Grid.Row="2" Grid.Column="1">
-        <Border CornerRadius="25" DockPanel.Dock="Top" 
-                    VerticalAlignment="Center" HorizontalAlignment="Center" Height="100" Width="100">
-            <Border.Background>
-                <ImageBrush ImageSource="ImageSource\ServiceImage.jpg" />
-            </Border.Background>
-
-        </Border>
-        <DockPanel>
+        <Grid DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="160" />
+                </Grid.ColumnDefinitions>
+                
+                <Button  Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="38"
+                                 Margin="5" > Отправить </Button>
+                <Border Grid.Column="1" CornerRadius="25"  
+                        VerticalAlignment="Center" HorizontalAlignment="Center" Height="100" Width="100">
+                    <Border.Background>
+                        <ImageBrush ImageSource="ImageSource\ServiceImage.jpg" />
+                    </Border.Background>
+                </Border>
+                <Button Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="38"
+                                 Margin="5"> Получить </Button>
+            </Grid>
+            <DockPanel>
             <GroupBox Header="Управление">
                 <Grid >
                     <Grid.ColumnDefinitions >
@@ -75,16 +86,16 @@
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions >
                         <RowDefinition Height="10"/>
-                        <RowDefinition Height="0.3*"/>
-                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="10"/>
                     </Grid.RowDefinitions>
 
-                    <Label Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"
+                    <Label Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5" Height="28"
                                >
                         Путь к папке (локальный):</Label>
-                    <Label Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"
+                    <Label Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"  
                                >
                         Путь к папке (удалённый):</Label>
 
@@ -100,10 +111,10 @@
 
                         <GroupBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ColumnSpan="5"
                                  Margin="5" Header="Консоль">
-                            <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Black" 
-                                       Foreground="White" FontFamily="Console">
-                                ...
-                            </TextBlock> 
+                            <ScrollViewer x:Name="scrollLogConsole" >
+                                <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Black" 
+                                    Foreground="White" FontFamily="Console" FontSize="20" x:Name="logConsole" />
+                            </ScrollViewer>
                         </GroupBox>
 
                     </Grid>

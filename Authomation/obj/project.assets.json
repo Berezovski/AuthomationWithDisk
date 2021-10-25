@@ -1229,6 +1229,19 @@
         "runtime": {
           "bin/placeholder/GoogleDiskModule.dll": {}
         }
+      },
+      "WinLogger/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/WinLogger.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WinLogger.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       }
     }
   },
@@ -4443,6 +4456,11 @@
       "type": "project",
       "path": "../Modules/GoogleDiskModule/GoogleDiskModule.csproj",
       "msbuildProject": "../Modules/GoogleDiskModule/GoogleDiskModule.csproj"
+    },
+    "WinLogger/1.0.0": {
+      "type": "project",
+      "path": "../WinLogger/WinLogger.csproj",
+      "msbuildProject": "../WinLogger/WinLogger.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4459,7 +4477,8 @@
       "Serilog.Extensions.Logging >= 3.0.1",
       "Serilog.Formatting.Compact >= 1.1.0",
       "Serilog.Settings.Configuration >= 3.1.0",
-      "Serilog.Sinks.File >= 5.0.0"
+      "Serilog.Sinks.File >= 5.0.0",
+      "WinLogger >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4497,6 +4516,9 @@
             },
             "D:\\VisualStudio_Projects\\Authomation\\Modules\\GoogleDiskModule\\GoogleDiskModule.csproj": {
               "projectPath": "D:\\VisualStudio_Projects\\Authomation\\Modules\\GoogleDiskModule\\GoogleDiskModule.csproj"
+            },
+            "D:\\VisualStudio_Projects\\Authomation\\WinLogger\\WinLogger.csproj": {
+              "projectPath": "D:\\VisualStudio_Projects\\Authomation\\WinLogger\\WinLogger.csproj"
             }
           }
         }

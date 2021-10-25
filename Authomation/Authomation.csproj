@@ -37,6 +37,7 @@
     <ProjectReference Include="..\Components\Disk\Disk.csproj" />
     <ProjectReference Include="..\DryIoc\Authomation.DI.Extensions\Authomation.DI.Extensions.csproj" />
     <ProjectReference Include="..\Modules\GoogleDiskModule\GoogleDiskModule.csproj" />
+    <ProjectReference Include="..\WinLogger\WinLogger.csproj" />
   </ItemGroup>
 
 </Project>
