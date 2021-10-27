@@ -77,3 +77,8 @@ D:\VisualStudio_Projects\Authomation\Authomation\obj\Debug\netcoreapp3.1\Authoma
 D:\VisualStudio_Projects\Authomation\Authomation\obj\Debug\netcoreapp3.1\Authomation.genruntimeconfig.cache
 D:\VisualStudio_Projects\Authomation\Authomation\bin\Debug\netcoreapp3.1\WinLogger.dll
 D:\VisualStudio_Projects\Authomation\Authomation\bin\Debug\netcoreapp3.1\WinLogger.pdb
+D:\VisualStudio_Projects\Authomation\Authomation\bin\Debug\netcoreapp3.1\Google.Apis.dll
+D:\VisualStudio_Projects\Authomation\Authomation\bin\Debug\netcoreapp3.1\Google.Apis.Auth.PlatformServices.dll
+D:\VisualStudio_Projects\Authomation\Authomation\bin\Debug\netcoreapp3.1\Google.Apis.Auth.dll
+D:\VisualStudio_Projects\Authomation\Authomation\bin\Debug\netcoreapp3.1\Google.Apis.Core.dll
+D:\VisualStudio_Projects\Authomation\Authomation\bin\Debug\netcoreapp3.1\Google.Apis.Drive.v3.dll

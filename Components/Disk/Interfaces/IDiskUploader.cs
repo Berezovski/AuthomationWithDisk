@@ -8,8 +8,8 @@ namespace Disk.Interfaces
 {
     public interface IDiskUploader
     {
-        void UploadExportFiles();
-        void GetDiskInfo();
+        string Info { get; }
+        bool UploadExportFiles();
 
     }
 }

@@ -108,7 +108,7 @@
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             },
-            "Microsoft.WindowsDesktop.App.WPF": {
+            "Microsoft.WindowsDesktop.App": {
               "privateAssets": "none"
             }
           },
@@ -196,6 +196,9 @@
             "projectReferences": {
               "D:\\VisualStudio_Projects\\Authomation\\Components\\Disk\\Disk.csproj": {
                 "projectPath": "D:\\VisualStudio_Projects\\Authomation\\Components\\Disk\\Disk.csproj"
+              },
+              "D:\\VisualStudio_Projects\\Authomation\\WinLogger\\WinLogger.csproj": {
+                "projectPath": "D:\\VisualStudio_Projects\\Authomation\\WinLogger\\WinLogger.csproj"
               }
             }
           }
@@ -210,6 +213,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Google.Apis.Drive.v3": {
+              "target": "Package",
+              "version": "[1.55.0.2481, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -217,6 +224,12 @@
             "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "MimeTypes": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.1, )"
             }
           },
           "imports": [

@@ -12,6 +12,8 @@ D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\netcorea
 D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\netcoreapp3.1\GoogleDiskModule.AssemblyInfoInputs.cache
 D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\netcoreapp3.1\GoogleDiskModule.AssemblyInfo.cs
 D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\netcoreapp3.1\GoogleDiskModule.csproj.CoreCompileInputs.cache
-D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\netcoreapp3.1\GoogleDiskModule.csproj.CopyComplete
 D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\netcoreapp3.1\GoogleDiskModule.dll
 D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\netcoreapp3.1\GoogleDiskModule.pdb
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\obj\Debug\netcoreapp3.1\GoogleDiskModule.csproj.CopyComplete
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\bin\Debug\netcoreapp3.1\WinLogger.dll
+D:\VisualStudio_Projects\Authomation\Modules\GoogleDiskModule\bin\Debug\netcoreapp3.1\WinLogger.pdb

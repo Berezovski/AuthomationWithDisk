@@ -1,7 +1,9 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using Disk.Interfaces;
 using DryIoc;
 using WinLogger;
+using static Authomation.MainwindowViewModel;
 
 namespace Authomation
 {
@@ -10,27 +12,14 @@ namespace Authomation
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static IContainer Container = new Container();
-
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainwindowViewModel();
             new LogUploader(logConsole,scrollLogConsole);
-            LogUploader.LogInformation("Запуск службы конфигурации...");
-            var config = Startup.BuildConfiguration();
 
-            LogUploader.LogInformation("Регистрация конфигураций...");
-            Container.RegisterInstance(config);
 
-            LogUploader.LogInformation("Добавление модулей...");
-            Container.AddModules();
-
-            LogUploader.LogSuccess("Успешно...");
-
-            //не работает
-            IDiskUploader diskUploader = Container.Resolve<IDiskUploader>();
         }
-
 
     }
 }
