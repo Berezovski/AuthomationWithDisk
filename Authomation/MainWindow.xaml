@@ -46,10 +46,10 @@
 
     <Menu VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
         <MenuItem Header="Файл">
-            <MenuItem Header="Автор"/>
-            <Separator/>
-            <MenuItem Header="Выход"/>
-        </MenuItem>
+                <MenuItem Header="Автор"/>
+                <Separator/>
+                <MenuItem Header="Выход"  Command="{Binding OnExitFromProgramClick}"/>
+            </MenuItem>
 
         <MenuItem Header="О программе">
         </MenuItem>
@@ -61,9 +61,10 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="160" />
                 </Grid.ColumnDefinitions>
-                
+
                 <Button  Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="38"
-                          Command="{Binding OnSendFilesClick}"> Отправить </Button>
+                          Command="{Binding OnSendFilesClick}" Content="{Binding SendFilesHeader.ButtonHeader}"
+                         IsEnabled="{Binding SendFilesButtonEnabled.ButtonIsEnabled}"></Button>
                 <Border Grid.Column="1" CornerRadius="25"  
                         VerticalAlignment="Center" HorizontalAlignment="Center" Height="100" Width="100">
                     <Border.Background>
@@ -71,7 +72,8 @@
                     </Border.Background>
                 </Border>
                 <Button Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="38"
-                                 > Получить </Button>
+                                 Command="{Binding OnGetFilesClick}" Content="{Binding GetFilesHeader.ButtonHeader}"
+                         IsEnabled="{Binding GetFilesButtonEnabled.ButtonIsEnabled}"></Button>
             </Grid>
             <DockPanel>
             <GroupBox Header="Управление">

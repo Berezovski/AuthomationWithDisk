@@ -14,6 +14,7 @@ using File = Google.Apis.Drive.v3.Data.File;
 using GoogleDisk.Settings;
 using WinLogger;
 using System.Text;
+using System.Reflection;
 
 namespace GoogleDisk.Uploader
 {
@@ -21,7 +22,7 @@ namespace GoogleDisk.Uploader
     {
         #region Fields
 
-        private readonly GoogleDiskSettings _diskSettings;
+        private GoogleDiskSettings _diskSettings;
         private readonly string[] Scopes = { DriveService.Scope.Drive };
 
         private const string formatPath = "yyyy'.'MM'.'dd";
@@ -30,7 +31,26 @@ namespace GoogleDisk.Uploader
         private DriveService _driveService;
 
         private StringBuilder info;
+        #endregion
 
+        #region Properties
+        IDownloadAndUploadSettings IDiskUploader.DownloadAndUploadSettings
+        {
+            get
+            {
+                return _diskSettings;
+            }
+            set
+            {
+                PropertyInfo[] tmp = value.GetType().GetProperties();
+                for (int i = 0; i < tmp.Length; i++)
+                {
+                    var fieldInfo = _diskSettings.GetType().GetProperty(tmp[i].Name);
+                    fieldInfo.SetValue(_diskSettings, tmp[i].GetValue(value));
+                }
+
+            }
+        }
         string IDiskUploader.Info
         {
             get
@@ -55,58 +75,109 @@ namespace GoogleDisk.Uploader
 
         #region Methods
 
-        /// <inheritdoc/>
-        public bool UploadExportFiles()
+
+        bool IDiskUploader.RunService()
         {
             try
             {
-                // run google drive service
-                RunService();
+                SetUserCredential();
+                StartDriveService();
 
-                // get files from export path
-                var files = Directory.GetFiles(_diskSettings.ExportPath);
-                //LogUploader.LogInformation($"Getting files to upload to the Google.Disk from: {_diskSettings.ExportPath}");
-                info.Append($"Getting files to upload to the Google.Disk from: {_diskSettings.ExportPath}.");
-
-
-                if (files.Length > 0)
-                {
-                    var cloudPath = $"{_diskSettings.CloudStoragePath}/{DateTime.Now.ToString(formatPath)}/{_diskSettings.DeviceName}";
-                    var id = CreateFoldersFromPathAndGetLastFolderId(cloudPath);
-
-                    info.AppendLine($"Found {files.Length} files to upload to the Google.Disk.");
-                    //LogUploader.LogInformation($"Found {files.Length} files to upload to the Google.Disk");
-
-                    UploadFiles(id, files);
-                }
-                else
-                {
-                    info.AppendLine("There are no files in the folder.");
-                    //LogUploader.LogInformation("There are no files in the folder");
-                }
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
-                info.AppendLine($"Error in method UploadExportFiles(): {ex.Message}.");
-                //LogUploader.LogError($"Error in method UploadExportFiles(): {ex.Message}");
                 return false;
             }
 
         }
 
+        public bool CheckLocalPath()
+        {
+            try
+            {
+                Directory.GetFiles(_diskSettings.ExportPath);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public void StartUploadExportFiles()
+        {
+            var files = Directory.GetFiles(_diskSettings.ExportPath);
+            //LogUploader.LogInformation($"Getting files to upload to the Google.Disk from: {_diskSettings.ExportPath}");
+            info.Append($"Getting files to upload to the Google.Disk from: {_diskSettings.ExportPath}.");
+
+
+            if (files.Length > 0)
+            {
+                var cloudPath = $"{_diskSettings.CloudStoragePath}\\{DateTime.Now.ToString(formatPath)}\\{_diskSettings.DeviceName}";
+                var id = CreateFoldersFromPathAndGetLastFolderId(cloudPath);
+
+                info.AppendLine($"Found {files.Length} files to upload to the Google.Disk.");
+                //LogUploader.LogInformation($"Found {files.Length} files to upload to the Google.Disk");
+
+                UploadFiles(id, files);
+            }
+
+        }
+
+        public void StartDownloadFiles()
+        {
+
+            var cloudPath = $"{_diskSettings.CloudStoragePath}\\{DateTime.Now.ToString(formatPath)}\\{_diskSettings.DeviceName}";
+            var id = CreateFoldersFromPathAndGetLastFolderId(cloudPath);
+
+            // google request 
+            var lsRequest = _driveService.Files.List();
+
+            lsRequest.Q = $" '{id}' in parents and trashed = false";
+
+            var fileList = lsRequest.Execute();          
+
+            for (int i = 0; i < fileList.Files.Count; i++)
+            {
+                var request = _driveService.Files.Get(fileList.Files[i].Id);
+
+                try
+                {
+                    DownloadFile(request, fileList.Files[i].Name);
+                    DeleteFileWithId(fileList.Files[i].Id);
+                }
+                catch (Exception ex)
+                {
+
+                    info.AppendLine($"Error in method UploadExportFiles(): {ex.Message}.");
+
+                }
+            }         
+
+        }
+
+        private void DownloadFile(GetRequest request, string fileName)
+        {
+            using var stream = new System.IO.MemoryStream();
+            request.Download(stream);
+            System.IO.FileStream file = new System.IO.FileStream(Path.Combine(_diskSettings.ExportPath, fileName)
+                , System.IO.FileMode.Create, System.IO.FileAccess.Write);
+            stream.WriteTo(file);
+            file.Close();
+        }
+
+        private void DeleteFileWithId(string fileId)
+        {
+            var deleteRequest = _driveService.Files.Delete(fileId);
+            deleteRequest.Execute();
+        }
+
+        /// <inheritdoc/>
+
         #endregion
 
         #region Private Methods
-
-        private void RunService()
-        {
-            SetUserCredential();
-            StartDriveService();
-            info.AppendLine("Connected to the Google.Disk.");
-
-            //LogUploader.LogInformation("Connected to the Google.Disk");
-        }
 
         private void SetUserCredential()
         {
@@ -141,7 +212,7 @@ namespace GoogleDisk.Uploader
 
         private string CreateFoldersFromPathAndGetLastFolderId(string path)
         {
-            string[] folders = path.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] folders = path.Split(new char[] { '\\' }, StringSplitOptions.RemoveEmptyEntries);
             string parentDirectory = "root";
 
             for (int i = 0; i < folders.Length; i++)

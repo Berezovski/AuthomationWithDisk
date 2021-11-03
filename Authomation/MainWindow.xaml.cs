@@ -17,8 +17,6 @@ namespace Authomation
             InitializeComponent();
             DataContext = new MainwindowViewModel();
             new LogUploader(logConsole,scrollLogConsole);
-
-
         }
 
     }

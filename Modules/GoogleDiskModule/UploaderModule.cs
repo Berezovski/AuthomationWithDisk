@@ -10,9 +10,6 @@ namespace GoogleDiskModule
     public class UploaderModule : IModule
     {
 
-        // TODO: надо реализовать всех этих дядечек
-        // резолвишь IConfiguration из IContainer и смотришь чё в сеттингах валяется
-        // а вообще, по-хорошему стоит сделать базовый класс модуля, чтобы всё это гавно не реализовывать каждый раз (=
         public string Name { get; set; } = nameof(UploaderModule);
         public string AssemblyName { get; set; }
         public bool Enabled { get; set; }
@@ -23,7 +20,7 @@ namespace GoogleDiskModule
 
             if (configuration != default)
             {
-                var settings = configuration.GetSection(nameof(GoogleDiskSettings)).Get<GoogleDiskSettings>();
+                var settings = GoogleDiskSettings.FromConfiguration(configuration);
                 container.RegisterInstance(settings);
             }
 

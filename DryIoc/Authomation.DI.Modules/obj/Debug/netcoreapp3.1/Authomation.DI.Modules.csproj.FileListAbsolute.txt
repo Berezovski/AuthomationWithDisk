@@ -20,10 +20,10 @@ D:\VisualStudio_Projects\Authomation\Authomation.DI.Modules\obj\Debug\netcoreapp
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Modules\bin\Debug\netcoreapp3.1\Authomation.DI.Modules.deps.json
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Modules\bin\Debug\netcoreapp3.1\Authomation.DI.Modules.dll
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Modules\bin\Debug\netcoreapp3.1\Authomation.DI.Modules.pdb
+D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Modules\obj\Debug\netcoreapp3.1\Authomation.DI.Modules.csproj.AssemblyReference.cache
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Modules\obj\Debug\netcoreapp3.1\Authomation.DI.Modules.GeneratedMSBuildEditorConfig.editorconfig
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Modules\obj\Debug\netcoreapp3.1\Authomation.DI.Modules.AssemblyInfoInputs.cache
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Modules\obj\Debug\netcoreapp3.1\Authomation.DI.Modules.AssemblyInfo.cs
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Modules\obj\Debug\netcoreapp3.1\Authomation.DI.Modules.csproj.CoreCompileInputs.cache
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Modules\obj\Debug\netcoreapp3.1\Authomation.DI.Modules.dll
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Modules\obj\Debug\netcoreapp3.1\Authomation.DI.Modules.pdb
-D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Modules\obj\Debug\netcoreapp3.1\Authomation.DI.Modules.csproj.AssemblyReference.cache

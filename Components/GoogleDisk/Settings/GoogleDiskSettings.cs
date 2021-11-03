@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Disk.Interfaces;
 using Microsoft.Extensions.Configuration;
 
 
 namespace GoogleDisk.Settings
 {
-    public class GoogleDiskSettings
+    public class GoogleDiskSettings : IDownloadAndUploadSettings
     {
         public string OauthSecretFile { get; set; }
         public string FolderForSaveClientSettings { get; set; }

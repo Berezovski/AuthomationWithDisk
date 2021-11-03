@@ -20,6 +20,6 @@ D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Extensions\obj\Debug\
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Extensions\obj\Debug\netcoreapp3.1\Authomation.DI.Extensions.AssemblyInfoInputs.cache
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Extensions\obj\Debug\netcoreapp3.1\Authomation.DI.Extensions.AssemblyInfo.cs
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Extensions\obj\Debug\netcoreapp3.1\Authomation.DI.Extensions.csproj.CoreCompileInputs.cache
+D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Extensions\obj\Debug\netcoreapp3.1\Authomation.DI.Extensions.csproj.CopyComplete
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Extensions\obj\Debug\netcoreapp3.1\Authomation.DI.Extensions.dll
 D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Extensions\obj\Debug\netcoreapp3.1\Authomation.DI.Extensions.pdb
-D:\VisualStudio_Projects\Authomation\DryIoc\Authomation.DI.Extensions\obj\Debug\netcoreapp3.1\Authomation.DI.Extensions.csproj.CopyComplete
