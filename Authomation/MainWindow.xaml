@@ -4,6 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Authomation"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
+        
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance local:MainwindowViewModel}"
         Title="MainWindow" Height="800" Width="1200">
@@ -54,7 +57,10 @@
         <MenuItem Header="О программе">
         </MenuItem>
     </Menu>
-    <DockPanel Grid.Row="2" Grid.Column="1">
+
+        
+
+        <DockPanel Grid.Row="2" Grid.Column="1">
         <Grid DockPanel.Dock="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="160"/>
@@ -120,6 +126,8 @@
                                 <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Black" 
                                     Foreground="White" FontFamily="Console" FontSize="18" x:Name="logConsole" />
                             </ScrollViewer>
+
+  
                         </GroupBox>
 
                     </Grid>

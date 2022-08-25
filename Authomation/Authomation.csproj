@@ -28,10 +28,12 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0" />
+    <PackageReference Include="MvvmLightLibsStd10" Version="5.4.1.1" />
     <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
     <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+    <PackageReference Include="System.Windows.Interactivity.WPF" Version="2.0.20525" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,6 +41,12 @@
     <ProjectReference Include="..\DryIoc\Authomation.DI.Extensions\Authomation.DI.Extensions.csproj" />
     <ProjectReference Include="..\Modules\GoogleDiskModule\GoogleDiskModule.csproj" />
     <ProjectReference Include="..\WinLogger\WinLogger.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight.Platform">
+      <HintPath>C:\Users\sashu\.nuget\packages\mvvmlightlibsstd10\5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

@@ -505,6 +505,15 @@
           }
         }
       },
+      "MvvmLightLibsStd10/5.4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/GalaSoft.MvvmLight.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/GalaSoft.MvvmLight.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -1046,6 +1055,17 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
+        }
+      },
+      "System.Windows.Interactivity.WPF/2.0.20525": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Expression.Interactions.dll": {},
+          "lib/net40/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Expression.Interactions.dll": {},
+          "lib/net40/System.Windows.Interactivity.dll": {}
         }
       },
       "Authomation.DI.Extensions/1.0.0": {
@@ -1921,6 +1941,45 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "MvvmLightLibsStd10/5.4.1.1": {
+      "sha512": "zU9KXgq8dfnzxxOvvAVtasbhaQGoDlTr8Pw2AjZ1NB905GQljrxqkgh3jo5/47Vux5duw3/faUgcZjdfomGvFw==",
+      "type": "package",
+      "path": "mvvmlightlibsstd10/5.4.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid1/GalaSoft.MvvmLight.Platform.XML",
+        "lib/monoandroid1/GalaSoft.MvvmLight.Platform.dll",
+        "lib/monoandroid1/GalaSoft.MvvmLight.Platform.pdb",
+        "lib/monoandroid1/GalaSoft.MvvmLight.XML",
+        "lib/monoandroid1/GalaSoft.MvvmLight.dll",
+        "lib/monoandroid1/GalaSoft.MvvmLight.pdb",
+        "lib/net45/GalaSoft.MvvmLight.Platform.dll",
+        "lib/net45/GalaSoft.MvvmLight.Platform.pdb",
+        "lib/net45/GalaSoft.MvvmLight.Platform.xml",
+        "lib/net45/GalaSoft.MvvmLight.dll",
+        "lib/net45/GalaSoft.MvvmLight.pdb",
+        "lib/net45/GalaSoft.MvvmLight.xml",
+        "lib/net45/System.Windows.Interactivity.dll",
+        "lib/netstandard1.0/GalaSoft.MvvmLight.XML",
+        "lib/netstandard1.0/GalaSoft.MvvmLight.dll",
+        "lib/netstandard1.0/GalaSoft.MvvmLight.pdb",
+        "lib/uap10.0/GalaSoft.MvvmLight.Platform.dll",
+        "lib/uap10.0/GalaSoft.MvvmLight.Platform.pdb",
+        "lib/uap10.0/GalaSoft.MvvmLight.Platform.pri",
+        "lib/uap10.0/GalaSoft.MvvmLight.Platform.xml",
+        "lib/uap10.0/GalaSoft.MvvmLight.dll",
+        "lib/uap10.0/GalaSoft.MvvmLight.pdb",
+        "lib/uap10.0/GalaSoft.MvvmLight.xml",
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.Platform.XML",
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.Platform.dll",
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.XML",
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.dll",
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.pdb",
+        "mvvmlightlibsstd10.5.4.1.1.nupkg.sha512",
+        "mvvmlightlibsstd10.nuspec"
       ]
     },
     "Newtonsoft.Json/13.0.1": {
@@ -3924,6 +3983,21 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "System.Windows.Interactivity.WPF/2.0.20525": {
+      "sha512": "0r+Le4E7hCm4zToUvBzjSUyTcuU3rFeoPa7JyTdWIzR/F7wH6+O/pWkjHIG40hIA0z1wvRdZayvoizA4wcK1dg==",
+      "type": "package",
+      "path": "system.windows.interactivity.wpf/2.0.20525",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.Expression.Interactions.dll",
+        "lib/net40/Microsoft.Expression.Interactions.xml",
+        "lib/net40/System.Windows.Interactivity.dll",
+        "lib/net40/System.Windows.Interactivity.xml",
+        "system.windows.interactivity.wpf.2.0.20525.nupkg.sha512",
+        "system.windows.interactivity.wpf.nuspec"
+      ]
+    },
     "Authomation.DI.Extensions/1.0.0": {
       "type": "project",
       "path": "../DryIoc/Authomation.DI.Extensions/Authomation.DI.Extensions.csproj",
@@ -3966,10 +4040,12 @@
       "Microsoft.Extensions.DependencyInjection >= 5.0.0",
       "Microsoft.Extensions.Hosting >= 5.0.0",
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 5.0.0",
+      "MvvmLightLibsStd10 >= 5.4.1.1",
       "Serilog.Extensions.Logging >= 3.0.1",
       "Serilog.Formatting.Compact >= 1.1.0",
       "Serilog.Settings.Configuration >= 3.1.0",
       "Serilog.Sinks.File >= 5.0.0",
+      "System.Windows.Interactivity.WPF >= 2.0.20525",
       "WinLogger >= 1.0.0"
     ]
   },
@@ -3994,7 +4070,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/SMSLab/SMS/_packaging/SMS_Feed/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -4049,6 +4126,10 @@
             "target": "Package",
             "version": "[5.0.0, )"
           },
+          "MvvmLightLibsStd10": {
+            "target": "Package",
+            "version": "[5.4.1.1, )"
+          },
           "Serilog.Extensions.Logging": {
             "target": "Package",
             "version": "[3.0.1, )"
@@ -4064,6 +4145,10 @@
           "Serilog.Sinks.File": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "System.Windows.Interactivity.WPF": {
+            "target": "Package",
+            "version": "[2.0.20525, )"
           }
         },
         "imports": [
@@ -4087,5 +4172,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"System.Windows.Interactivity.WPF 2.0.20525\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETCoreApp,Version=v3.1\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "System.Windows.Interactivity.WPF",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

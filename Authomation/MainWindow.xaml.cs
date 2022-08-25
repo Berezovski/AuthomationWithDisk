@@ -4,6 +4,7 @@ using Disk.Interfaces;
 using DryIoc;
 using WinLogger;
 using static Authomation.MainwindowViewModel;
+using GalaSoft.MvvmLight.Command;
 
 namespace Authomation
 {
