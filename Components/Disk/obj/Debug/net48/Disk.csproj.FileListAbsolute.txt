@@ -1,9 +1,0 @@
-D:\VisualStudio_Projects\Authomation\Components\Disk\bin\Debug\net48\Disk.dll
-D:\VisualStudio_Projects\Authomation\Components\Disk\bin\Debug\net48\Disk.pdb
-D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net48\Disk.GeneratedMSBuildEditorConfig.editorconfig
-D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net48\Disk.AssemblyInfoInputs.cache
-D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net48\Disk.AssemblyInfo.cs
-D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net48\Disk.csproj.CoreCompileInputs.cache
-D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net48\Disk.dll
-D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net48\Disk.pdb
-D:\VisualStudio_Projects\Authomation\Components\Disk\obj\Debug\net48\Disk.csproj.AssemblyReference.cache
