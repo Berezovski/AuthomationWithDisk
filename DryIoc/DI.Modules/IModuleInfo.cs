@@ -1,4 +1,4 @@
-﻿namespace DryIocModules
+﻿namespace Authomation.DI.Modules
 {
     public interface IModuleInfo
     {

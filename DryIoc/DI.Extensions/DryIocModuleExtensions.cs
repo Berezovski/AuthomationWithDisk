@@ -1,12 +1,12 @@
-﻿using DryIoc;
-using DryIocModules;
+﻿using Authomation.DI.Modules;
+using DryIoc;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Authomation
+namespace Authomation.DI.Extensions
 {
     public static class DryIocModuleExtensions
     {
@@ -36,7 +36,7 @@ namespace Authomation
 
             if (activeModules != null && activeModules.Any())
             {
-                return AddModules(container, activeModules);
+                return container.AddModules(activeModules);
             }
 
             return container;
@@ -56,7 +56,7 @@ namespace Authomation
             }
 
             var moduleAssembly = AppDomain.CurrentDomain.GetAssemblies()
-                .FirstOrDefault(i => string.Equals(i.GetName().Name, 
+                .FirstOrDefault(i => string.Equals(i.GetName().Name,
                 moduleInfo.AssemblyName, StringComparison.CurrentCultureIgnoreCase));
 
             if (moduleAssembly == null)

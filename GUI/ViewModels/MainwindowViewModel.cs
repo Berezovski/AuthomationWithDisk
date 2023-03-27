@@ -1,13 +1,15 @@
-﻿using Authomation.Models;
-using Disk.Interfaces;
+﻿using Authomation.DI.Extensions;
+using Authomation.Disk.Interfaces;
+using Authomation.GUI;
+using Authomation.GUI.Models;
+using Authomation.WinLogger;
 using DryIoc;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WinLogger;
 
-namespace Authomation
+namespace Authomation.GUI.ViewModels
 {
     class MainwindowViewModel : System.ComponentModel.INotifyPropertyChanged
     {
@@ -36,10 +38,10 @@ namespace Authomation
         public MainwindowViewModel()
         {
             selectedPaths = new Paths
-                { 
+            {
                 LocalPath = "-",
                 RemotePath = "-"
-                };
+            };
 
             onSelectLocalFolderClick = new GetFolderPathCommand(GetFolderPath);
             onSendFilesClick = new SendFilesCommand(SendFilesOrKillSenderTask);
@@ -259,7 +261,7 @@ namespace Authomation
 
         private void StartGetFiles(int period)
         {
-            
+
             try
             {
                 GetFilesButtonEnabled.ButtonIsEnabled = false;

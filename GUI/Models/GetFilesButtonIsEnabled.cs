@@ -1,23 +1,23 @@
 ﻿using System.ComponentModel;
 
-namespace Authomation.Models
+namespace Authomation.GUI.Models
 {
-    class SendFilesHeaderText : INotifyPropertyChanged
+    class GetFilesButtonIsEnabled : INotifyPropertyChanged
     {
-        private string buttonHeader;
+        private bool buttonIsEnabled;
 
-        public string ButtonHeader
+        public bool ButtonIsEnabled
         {
             get
             {
-                return buttonHeader;
+                return buttonIsEnabled;
             }
             set
             {
-                buttonHeader = value;
-                OnPropertyChanged("ButtonHeader");
+                buttonIsEnabled = value;
+                OnPropertyChanged("ButtonIsEnabled");
             }
-        }   
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(string pop = "")

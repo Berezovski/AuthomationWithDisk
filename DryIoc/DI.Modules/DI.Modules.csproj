@@ -2,11 +2,11 @@
 
 	<PropertyGroup>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
-		<ApplicationIcon />
-		<OutputType>Library</OutputType>
-		<StartupObject />
-		<UseWPF>true</UseWPF>
 		<RootNamespace>Authomation.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DryIoc" Version="4.8.3" />
+	</ItemGroup>
 
 </Project>

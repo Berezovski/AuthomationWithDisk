@@ -1,6 +1,6 @@
-﻿using Disk.Interfaces;
+﻿using Authomation.Disk.Interfaces;
 
-namespace Authomation.Models
+namespace Authomation.GUI.Models
 {
     class DownloadAndUploadSettings : IDownloadAndUploadSettings
     {

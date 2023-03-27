@@ -1,6 +1,6 @@
 ﻿using DryIoc;
 
-namespace DryIocModules
+namespace Authomation.DI.Modules
 {
     public interface IModule : IModuleInfo
     {

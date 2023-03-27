@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Authomation.Models
+namespace Authomation.GUI.Models
 {
-    class GetFilesCommand : ICommand
+    class GetFolderPathCommand : ICommand
     {
         private Action<object> execute;
         private Func<object, bool> canExecute;
@@ -14,7 +14,7 @@ namespace Authomation.Models
             remove { CommandManager.RequerySuggested -= value; }
         }
 
-        public GetFilesCommand(Action<object> execute, Func<object, bool> canExecute = null)
+        public GetFolderPathCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
             this.execute = execute;
             this.canExecute = canExecute;
@@ -22,12 +22,12 @@ namespace Authomation.Models
 
         public bool CanExecute(object parameter)
         {
-            return this.canExecute == null || this.canExecute(parameter);
+            return canExecute == null || canExecute(parameter);
         }
 
         public void Execute(object parameter)
         {
-            this.execute(parameter);
+            execute(parameter);
         }
     }
 }

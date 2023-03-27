@@ -3,7 +3,7 @@ using Serilog;
 using System;
 using System.IO;
 
-namespace Authomation
+namespace Authomation.GUI
 {
     class Startup
     {

@@ -1,4 +1,4 @@
-﻿namespace Disk.Interfaces
+﻿namespace Authomation.Disk.Interfaces
 {
     public interface IDiskUploader
     {

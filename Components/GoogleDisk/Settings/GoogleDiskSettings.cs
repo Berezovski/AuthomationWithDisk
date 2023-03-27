@@ -1,7 +1,7 @@
-﻿using Disk.Interfaces;
+﻿using Authomation.Disk.Interfaces;
 using Microsoft.Extensions.Configuration;
 
-namespace GoogleDisk.Settings
+namespace Authomation.GoogleDisk.Settings
 {
     public class GoogleDiskSettings : IDownloadAndUploadSettings
     {

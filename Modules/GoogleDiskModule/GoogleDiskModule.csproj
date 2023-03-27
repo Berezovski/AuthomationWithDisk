@@ -1,12 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<RootNamespace>Authomation.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Components\GoogleDisk\GoogleDisk.csproj" />
-    <ProjectReference Include="..\..\DryIoc\Authomation.DI.Modules\Authomation.DI.Modules.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Components\GoogleDisk\GoogleDisk.csproj" />
+		<ProjectReference Include="..\..\DryIoc\DI.Modules\DI.Modules.csproj" />
+	</ItemGroup>
 
 </Project>

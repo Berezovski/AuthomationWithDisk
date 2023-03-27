@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Authomation.Models
+namespace Authomation.GUI.Models
 {
     class Paths : INotifyPropertyChanged
     {

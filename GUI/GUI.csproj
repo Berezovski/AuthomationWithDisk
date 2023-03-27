@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
+  	<RootNamespace>Authomation.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -38,7 +39,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Components\Disk\Disk.csproj" />
-    <ProjectReference Include="..\DryIoc\Authomation.DI.Extensions\Authomation.DI.Extensions.csproj" />
+    <ProjectReference Include="..\DryIoc\DI.Extensions\DI.Extensions.csproj" />
     <ProjectReference Include="..\Modules\GoogleDiskModule\GoogleDiskModule.csproj" />
     <ProjectReference Include="..\WinLogger\WinLogger.csproj" />
   </ItemGroup>

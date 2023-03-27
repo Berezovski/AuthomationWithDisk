@@ -1,9 +1,9 @@
-﻿using Disk.Interfaces;
+﻿using Authomation.Disk.Interfaces;
+using Authomation.GoogleDisk.Settings;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v3;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
-using GoogleDisk.Settings;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,7 +14,7 @@ using System.Threading;
 using static Google.Apis.Drive.v3.FilesResource;
 using File = Google.Apis.Drive.v3.Data.File;
 
-namespace GoogleDisk.Uploader
+namespace Authomation.GoogleDisk.Uploader
 {
     public class GoogleDiskUploader : IDiskUploader
     {
@@ -132,7 +132,7 @@ namespace GoogleDisk.Uploader
 
             lsRequest.Q = $" '{id}' in parents and trashed = false";
 
-            var fileList = lsRequest.Execute();          
+            var fileList = lsRequest.Execute();
 
             for (int i = 0; i < fileList.Files.Count; i++)
             {
@@ -149,16 +149,16 @@ namespace GoogleDisk.Uploader
                     info.AppendLine($"Error in method UploadExportFiles(): {ex.Message}.");
 
                 }
-            }         
+            }
 
         }
 
         private void DownloadFile(GetRequest request, string fileName)
         {
-            using var stream = new System.IO.MemoryStream();
+            using var stream = new MemoryStream();
             request.Download(stream);
-            System.IO.FileStream file = new System.IO.FileStream(Path.Combine(_diskSettings.ExportPath, fileName)
-                , System.IO.FileMode.Create, System.IO.FileAccess.Write);
+            FileStream file = new FileStream(Path.Combine(_diskSettings.ExportPath, fileName)
+                , FileMode.Create, FileAccess.Write);
             stream.WriteTo(file);
             file.Close();
         }

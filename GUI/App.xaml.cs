@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Authomation
+namespace Authomation.GUI
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml

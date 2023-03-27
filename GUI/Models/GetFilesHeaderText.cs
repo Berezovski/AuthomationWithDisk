@@ -1,21 +1,21 @@
 ﻿using System.ComponentModel;
 
-namespace Authomation.Models
+namespace Authomation.GUI.Models
 {
-    class GetFilesButtonIsEnabled : INotifyPropertyChanged
+    class GetFilesHeaderText : INotifyPropertyChanged
     {
-        private bool buttonIsEnabled;
+        private string buttonHeader;
 
-        public bool ButtonIsEnabled
+        public string ButtonHeader
         {
             get
             {
-                return buttonIsEnabled;
+                return buttonHeader;
             }
             set
             {
-                buttonIsEnabled = value;
-                OnPropertyChanged("ButtonIsEnabled");
+                buttonHeader = value;
+                OnPropertyChanged("ButtonHeader");
             }
         }
 

@@ -1,7 +1,7 @@
 ﻿using DryIoc;
 using Microsoft.Extensions.Configuration;
 
-namespace Authomation
+namespace Authomation.DI.Extensions
 {
     public static class CompositionRoot
     {

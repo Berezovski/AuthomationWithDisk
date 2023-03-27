@@ -1,11 +1,11 @@
-﻿using Disk.Interfaces;
+﻿using Authomation.DI.Modules;
+using Authomation.Disk.Interfaces;
+using Authomation.GoogleDisk.Settings;
+using Authomation.GoogleDisk.Uploader;
 using DryIoc;
-using DryIocModules;
-using GoogleDisk.Settings;
-using GoogleDisk.Uploader;
 using Microsoft.Extensions.Configuration;
 
-namespace GoogleDiskModule
+namespace Authomation.GoogleDiskModule
 {
     public class UploaderModule : IModule
     {

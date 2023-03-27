@@ -1,7 +1,8 @@
-﻿using System.Windows;
-using WinLogger;
+﻿using Authomation.GUI.ViewModels;
+using Authomation.WinLogger;
+using System.Windows;
 
-namespace Authomation
+namespace Authomation.GUI
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
