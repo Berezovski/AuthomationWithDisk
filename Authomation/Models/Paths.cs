@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
+﻿using System.ComponentModel;
 
 namespace Authomation.Models
 {
@@ -9,7 +6,6 @@ namespace Authomation.Models
     {
         private string remotePath;
         private string localPath;
-
 
         public string RemotePath
         {
@@ -35,8 +31,6 @@ namespace Authomation.Models
                 OnPropertyChanged("LocalPath");
             }
         }
-
-
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(string pop = "")

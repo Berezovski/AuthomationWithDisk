@@ -1,15 +1,14 @@
-﻿using DryIoc;
-using GoogleDisk.Settings;
-using Microsoft.Extensions.Configuration;
-using Disk.Interfaces;
-using GoogleDisk.Uploader;
+﻿using Disk.Interfaces;
+using DryIoc;
 using DryIocModules;
+using GoogleDisk.Settings;
+using GoogleDisk.Uploader;
+using Microsoft.Extensions.Configuration;
 
 namespace GoogleDiskModule
 {
     public class UploaderModule : IModule
     {
-
         public string Name { get; set; } = nameof(UploaderModule);
         public string AssemblyName { get; set; }
         public bool Enabled { get; set; }
@@ -17,7 +16,6 @@ namespace GoogleDiskModule
         public void RegisterTypes(IContainer container)
         {
             var configuration = container.Resolve<IConfiguration>(IfUnresolved.ReturnDefault);
-
             if (configuration != default)
             {
                 var settings = GoogleDiskSettings.FromConfiguration(configuration);

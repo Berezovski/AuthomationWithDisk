@@ -1,14 +1,11 @@
 ﻿using Authomation.Models;
 using Disk.Interfaces;
+using DryIoc;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinLogger;
-using DryIoc;
-using System.Threading.Tasks;
-using System.Threading;
 
 namespace Authomation
 {
@@ -33,7 +30,7 @@ namespace Authomation
         private CancellationTokenSource killSenderTask;
 
         public static IContainer _container = new Container();
-        #endregion
+        #endregion Fields
 
         #region Constructors
         public MainwindowViewModel()
@@ -65,7 +62,7 @@ namespace Authomation
             SelectedPaths.LocalPath = _diskUploader.DownloadAndUploadSettings.ExportPath;
             SelectedPaths.RemotePath = _diskUploader.DownloadAndUploadSettings.CloudStoragePath;
         }
-        #endregion
+        #endregion Constructors
 
         #region Properties
         public ExitFromProgramClick OnExitFromProgramClick
@@ -183,10 +180,9 @@ namespace Authomation
                 OnPropertyChanged("OnGetFilesClick");
             }
         }
-        #endregion
+        #endregion Properties
 
         #region Methods
-
         private void ExitFromProgram(object obj)
         {
             Environment.Exit(1);
@@ -315,7 +311,6 @@ namespace Authomation
 
                 while (!killSenderTask.Token.IsCancellationRequested)
                 {
-
                     _diskUploader.StartUploadExportFiles();
                     Thread.Sleep(period);
                 }
@@ -323,8 +318,6 @@ namespace Authomation
             }
             catch
             {
-
-
             }
             finally
             {
@@ -332,8 +325,6 @@ namespace Authomation
                 SendFilesButtonEnabled.ButtonIsEnabled = true;
                 GetFilesButtonEnabled.ButtonIsEnabled = true;
             }
-
-
         }
 
         public void OnPropertyChanged(string pop = "")
@@ -343,11 +334,10 @@ namespace Authomation
                 PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(pop));
             }
         }
-        #endregion
+        #endregion Methods
 
         #region Events
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        #endregion
-
+        #endregion Events
     }
 }

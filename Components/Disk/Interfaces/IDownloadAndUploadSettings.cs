@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Disk.Interfaces
+﻿namespace Disk.Interfaces
 {
     public interface IDownloadAndUploadSettings
     {
-        public string CloudStoragePath { get; set; }
-        public string ExportPath { get; set; }
-        public bool OverwriteCloudFiles { get; set; }
-        public bool DeleteFileAfterUpload { get; set; }
+        string CloudStoragePath { get; set; }
+        string ExportPath { get; set; }
+        bool OverwriteCloudFiles { get; set; }
+        bool DeleteFileAfterUpload { get; set; }
     }
 }

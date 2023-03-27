@@ -1,30 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DryIocModules
+﻿namespace DryIocModules
 {
     public interface IModuleInfo
     {
         /// <summary>
-        /// The name of the module.
+        /// Имя модуля.
         /// </summary>
         string Name { get; set; }
 
         /// <summary>
-        /// Simple name of assembly where defined module, and name should be file extension.
+        /// Простое имя сборки, в которой определен модуль, причем имя должно быть расширением файла.
         /// </summary>
         string AssemblyName { get; set; }
 
         /// <summary>
-        /// Determines that the module is enabled.
+        /// Определяет, включен ли модуль.
         /// </summary>
         bool Enabled { get; set; }
 
         //// <summary>
-        //// The module names this instance depends on.
+        //// Имена модулей, от которых зависит данный экземпляр.
         //// </summary>
         //ICollection<string> DependsOn { get; set; }
     }

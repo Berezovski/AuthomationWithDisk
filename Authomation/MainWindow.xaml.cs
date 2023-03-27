@@ -1,10 +1,5 @@
 ﻿using System.Windows;
-using System.Windows.Controls;
-using Disk.Interfaces;
-using DryIoc;
 using WinLogger;
-using static Authomation.MainwindowViewModel;
-using GalaSoft.MvvmLight.Command;
 
 namespace Authomation
 {
@@ -19,6 +14,5 @@ namespace Authomation
             DataContext = new MainwindowViewModel();
             new LogUploader(logConsole,scrollLogConsole);
         }
-
     }
 }

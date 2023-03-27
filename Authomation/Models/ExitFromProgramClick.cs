@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 
 namespace Authomation.Models
@@ -21,11 +19,11 @@ namespace Authomation.Models
             this.execute = execute;
             this.canExecute = canExecute;
         }
+
         public bool CanExecute(object parameter)
         {
             return this.canExecute == null || this.canExecute(parameter);
         }
-
 
         public void Execute(object parameter)
         {

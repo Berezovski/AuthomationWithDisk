@@ -1,12 +1,11 @@
 ﻿using DryIoc;
-using System;
 
 namespace DryIocModules
 {
     public interface IModule : IModuleInfo
     {
         /// <summary>
-        /// Used to register types with the DryIoc container.
+        /// Используется для регистрации типов в контейнере DryIoc.
         /// </summary>
         void RegisterTypes(IContainer container);
     }

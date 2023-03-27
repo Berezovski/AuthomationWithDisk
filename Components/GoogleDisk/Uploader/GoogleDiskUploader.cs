@@ -1,20 +1,18 @@
 ﻿using Disk.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v3;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
+using GoogleDisk.Settings;
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using static Google.Apis.Drive.v3.FilesResource;
 using File = Google.Apis.Drive.v3.Data.File;
-using GoogleDisk.Settings;
-using WinLogger;
-using System.Text;
-using System.Reflection;
 
 namespace GoogleDisk.Uploader
 {
@@ -31,7 +29,7 @@ namespace GoogleDisk.Uploader
         private DriveService _driveService;
 
         private StringBuilder info;
-        #endregion
+        #endregion Fields
 
         #region Properties
         IDownloadAndUploadSettings IDiskUploader.DownloadAndUploadSettings
@@ -61,7 +59,7 @@ namespace GoogleDisk.Uploader
             }
         }
 
-        #endregion
+        #endregion Properties
 
         #region Constructor
 
@@ -71,11 +69,9 @@ namespace GoogleDisk.Uploader
             info = new StringBuilder();
         }
 
-        #endregion
+        #endregion Constructor
 
         #region Methods
-
-
         bool IDiskUploader.RunService()
         {
             try
@@ -131,7 +127,7 @@ namespace GoogleDisk.Uploader
             var cloudPath = $"{_diskSettings.CloudStoragePath}\\{DateTime.Now.ToString(formatPath)}\\{_diskSettings.DeviceName}";
             var id = CreateFoldersFromPathAndGetLastFolderId(cloudPath);
 
-            // google request 
+            // запрос в google 
             var lsRequest = _driveService.Files.List();
 
             lsRequest.Q = $" '{id}' in parents and trashed = false";
@@ -175,7 +171,7 @@ namespace GoogleDisk.Uploader
 
         /// <inheritdoc/>
 
-        #endregion
+        #endregion Methods
 
         #region Private Methods
 
@@ -334,6 +330,6 @@ namespace GoogleDisk.Uploader
             }
         }
 
-        #endregion
+        #endregion Private Methods
     }
 }

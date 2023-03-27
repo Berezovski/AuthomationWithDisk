@@ -16,7 +16,9 @@ namespace Authomation
             var activeModules = modulesInfoArray.Where(i => i.Enabled).ToArray();
 
             if (!activeModules.Any())
+            {
                 return container;
+            }
 
             foreach (var moduleInfo in activeModules)
             {
@@ -41,18 +43,21 @@ namespace Authomation
         }
 
         /// <summary>
-        /// Add module manually.
+        /// Добавить модуль вручную.
         /// </summary>
-        /// <param name="container">Instance of DryIoc container.</param>
-        /// <param name="moduleInfo">Instance of <see cref="IModuleInfo"/></param>
-        /// <returns>DryIoc container</returns>
+        /// <param name="container">Экземпляр контейнера DryIoc.</param>
+        /// <param name="moduleInfo">Экземпляр <see cref="IModuleInfo"/></param>
+        /// <returns>Контейнер DryIoc</returns>
         public static IContainer AddModule(this IContainer container, IModuleInfo moduleInfo)
         {
             if (moduleInfo == null || !moduleInfo.Enabled)
+            {
                 return container;
+            }
 
             var moduleAssembly = AppDomain.CurrentDomain.GetAssemblies()
-                .FirstOrDefault(i => string.Equals(i.GetName().Name, moduleInfo.AssemblyName, StringComparison.CurrentCultureIgnoreCase));
+                .FirstOrDefault(i => string.Equals(i.GetName().Name, 
+                moduleInfo.AssemblyName, StringComparison.CurrentCultureIgnoreCase));
 
             if (moduleAssembly == null)
             {
@@ -63,26 +68,28 @@ namespace Authomation
                 .FirstOrDefault(i => i.GetInterfaces().Contains(typeof(IModule)));
 
             if (moduleType == null)
+            {
                 return container;
+            }
 
             var moduleInstance = Activator.CreateInstance(moduleType);
-
             if (!(moduleInstance is IModule module) ||
                 !string.Equals(module.Name, moduleInfo.Name, StringComparison.CurrentCultureIgnoreCase))
+            {
                 return container;
+            }
 
-            // if module already registered then skip it
+            // если модуль уже зарегистрирован, то пропустите его
             if (container.IsRegistered(moduleType, module.Name))
+            {
                 return container;
+            }
 
             module.Enabled = moduleInfo.Enabled;
             module.AssemblyName = moduleInfo.AssemblyName;
             module.RegisterTypes(container);
             container.RegisterInstance(module, serviceKey: module.Name);
-
             return container;
         }
-
-
     }
 }

@@ -1,7 +1,4 @@
 ﻿using Disk.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Authomation.Models
 {

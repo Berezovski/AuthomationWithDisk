@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
+﻿using System.ComponentModel;
 
 namespace Authomation.Models
 {
     class SendFilesHeaderText : INotifyPropertyChanged
     {
         private string buttonHeader;
-
 
         public string ButtonHeader
         {
@@ -22,8 +18,6 @@ namespace Authomation.Models
                 OnPropertyChanged("ButtonHeader");
             }
         }   
-
-
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(string pop = "")
