@@ -1,4 +1,5 @@
-﻿using Authomation.DI.Extensions;
+﻿using Authomation.Cipher.Interfaces;
+using Authomation.DI.Extensions;
 using Authomation.Disk.Interfaces;
 using Authomation.GUI;
 using Authomation.GUI.Models;
@@ -13,6 +14,8 @@ namespace Authomation.GUI.ViewModels
 {
     class MainwindowViewModel : System.ComponentModel.INotifyPropertyChanged
     {
+        const string PASSWORD = "berezovski";
+
         #region Fields
         private Paths selectedPaths;
         private GetFolderPathCommand onSelectLocalFolderClick;
@@ -28,6 +31,7 @@ namespace Authomation.GUI.ViewModels
         private ExitFromProgramClick onExitFromProgramClick;
 
         private IDiskUploader _diskUploader;
+        private ICipher _cipher;
 
         private CancellationTokenSource killSenderTask;
 
@@ -60,6 +64,16 @@ namespace Authomation.GUI.ViewModels
             _container.RegisterInstance(config);
             _container.AddModules();
             _diskUploader = _container.Resolve<IDiskUploader>();
+
+            try
+            {
+                _cipher = _container.Resolve<ICipher>(); // не фатально
+                _diskUploader.InitCipher(_cipher, System.Text.Encoding.Unicode.GetBytes(PASSWORD));
+            }
+            catch
+            {
+                
+            }
 
             SelectedPaths.LocalPath = _diskUploader.DownloadAndUploadSettings.ExportPath;
             SelectedPaths.RemotePath = _diskUploader.DownloadAndUploadSettings.CloudStoragePath;
@@ -192,7 +206,6 @@ namespace Authomation.GUI.ViewModels
 
         private void GetFilesOrKillSenderTask(object obj)
         {
-
             if (GetFilesHeader.ButtonHeader == "Получить")
             {
                 _diskUploader.DownloadAndUploadSettings = new DownloadAndUploadSettings
@@ -213,9 +226,7 @@ namespace Authomation.GUI.ViewModels
                 GetFilesButtonEnabled.ButtonIsEnabled = false;
                 GetFilesHeader.ButtonHeader = "Получить";
                 killSenderTask.Cancel();
-
             }
-
         }
 
         private void GetFolderPath(object obj)
@@ -228,7 +239,6 @@ namespace Authomation.GUI.ViewModels
                 {
                     selectedPaths.LocalPath = fbd.SelectedPath;
                 }
-
             }
         }
 
@@ -254,14 +264,11 @@ namespace Authomation.GUI.ViewModels
                 SendFilesButtonEnabled.ButtonIsEnabled = false;
                 SendFilesHeader.ButtonHeader = "Отправить";
                 killSenderTask.Cancel();
-
             }
-
         }
 
         private void StartGetFiles(int period)
         {
-
             try
             {
                 GetFilesButtonEnabled.ButtonIsEnabled = false;
@@ -273,20 +280,14 @@ namespace Authomation.GUI.ViewModels
                 GetFilesHeader.ButtonHeader = "Остановить";
                 GetFilesButtonEnabled.ButtonIsEnabled = true;
 
-
                 while (!killSenderTask.Token.IsCancellationRequested)
                 {
-
                     _diskUploader.StartDownloadFiles();
-
                     Thread.Sleep(period);
                 }
-
-
             }
             catch
             {
-
             }
             finally
             {
@@ -294,8 +295,6 @@ namespace Authomation.GUI.ViewModels
                 SendFilesButtonEnabled.ButtonIsEnabled = true;
                 GetFilesButtonEnabled.ButtonIsEnabled = true;
             }
-
-
         }
 
         private void StartSendFiles(int period)
@@ -310,13 +309,11 @@ namespace Authomation.GUI.ViewModels
 
                 SendFilesHeader.ButtonHeader = "Остановить";
                 SendFilesButtonEnabled.ButtonIsEnabled = true;
-
                 while (!killSenderTask.Token.IsCancellationRequested)
                 {
                     _diskUploader.StartUploadExportFiles();
                     Thread.Sleep(period);
                 }
-
             }
             catch
             {

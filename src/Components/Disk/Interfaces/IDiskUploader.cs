@@ -1,4 +1,6 @@
-﻿namespace Authomation.Disk.Interfaces
+﻿using Authomation.Cipher.Interfaces;
+
+namespace Authomation.Disk.Interfaces
 {
     public interface IDiskUploader
     {
@@ -8,5 +10,7 @@
         bool CheckLocalPath();
         void StartUploadExportFiles();
         void StartDownloadFiles();
+        void InitCipher(ICipher cipher, byte[] password);
+        void UpdatePassword(byte[] password);
     }
 }

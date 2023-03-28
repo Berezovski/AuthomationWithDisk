@@ -18,7 +18,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="JsonSettings\appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
@@ -38,6 +38,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BlowfishCipherModule\BlowfishCipherModule.csproj" />
+    <ProjectReference Include="..\Components\Cipher\Cipher.csproj" />
     <ProjectReference Include="..\Components\Disk\Disk.csproj" />
     <ProjectReference Include="..\DryIoc\DI.Extensions\DI.Extensions.csproj" />
     <ProjectReference Include="..\Modules\GoogleDiskModule\GoogleDiskModule.csproj" />

@@ -5,8 +5,4 @@
 		<RootNamespace>Authomation.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <ProjectReference Include="..\Cipher\Cipher.csproj" />
-	</ItemGroup>
-
 </Project>
