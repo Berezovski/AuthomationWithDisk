@@ -6,7 +6,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Components\BlowfishCipher\BlowfishCipher.csproj" />
 	  <ProjectReference Include="..\DryIoc\DI.Modules\DI.Modules.csproj" />
 	</ItemGroup>
 

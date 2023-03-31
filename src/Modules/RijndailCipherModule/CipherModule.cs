@@ -1,9 +1,9 @@
-﻿using Authomation.BlowfishCipher;
-using Authomation.Cipher.Interfaces;
+﻿using Authomation.Cipher.Interfaces;
 using Authomation.DI.Modules;
+using Authomation.RijndailCipher;
 using DryIoc;
 
-namespace Authomation.GoogleDiskModule
+namespace Authomation.RijndailCipherModule
 {
     public class CipherModule : IModule
     {
@@ -13,7 +13,7 @@ namespace Authomation.GoogleDiskModule
 
         public void RegisterTypes(IContainer container)
         {
-            container.Register<ICipher, Blowfish>(Reuse.Singleton);
+            container.Register<ICipher, Rijndail>(Reuse.Singleton);
         }
     }
 }

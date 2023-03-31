@@ -20,7 +20,6 @@ namespace Authomation.GoogleDisk.Uploader
     public class GoogleDiskUploader : IDiskUploader
     {
         #region Fields
-
         private GoogleDiskSettings _diskSettings;
         private readonly string[] Scopes = { DriveService.Scope.Drive };
         private readonly byte[] _defaultPassword = new byte[3] { 1, 2, 3 };
@@ -171,7 +170,7 @@ namespace Authomation.GoogleDisk.Uploader
             if ((_cipher != null) || (_password != null) || (_password.Length != 0))
             {
                 var fileBytes = stream.ToArray();
-                var decryptedBytes = _cipher.Decrypt(fileBytes, _password).GetAwaiter().GetResult();
+                var decryptedBytes = _cipher.Decrypt(fileBytes, _password);
                 using var decryptedStream = new MemoryStream(decryptedBytes);
                 decryptedStream.WriteTo(file);
             }
@@ -284,8 +283,7 @@ namespace Authomation.GoogleDisk.Uploader
                 var sendByteArray = System.IO.File.ReadAllBytes(filePath);
                 if ((_cipher != null) || (_password != null) || (_password.Length != 0))
                 {
-                    sendByteArray = _cipher.Encrypt(sendByteArray, _password)
-                        .GetAwaiter().GetResult();
+                    sendByteArray = _cipher.Encrypt(sendByteArray, _password);
                 }
 
                 var dontDeleteId = UploadRequestAndGetFileId(body, sendByteArray);

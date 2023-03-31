@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace Authomation.BlowfishCipher
+namespace Authomation.RijndailCipher
 {
     /// <summary>
     /// Биты нумеруются справа налево, т.е. [63-ый, 62-ой, ... , 0-ой].

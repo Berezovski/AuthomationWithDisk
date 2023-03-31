@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<RootNamespace>Authomation.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Components\RijndailCipher\RijndailCipher.csproj" />
+	  <ProjectReference Include="..\..\DryIoc\DI.Modules\DI.Modules.csproj" />
+	</ItemGroup>
+
+</Project>
