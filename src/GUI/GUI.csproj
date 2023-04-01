@@ -6,6 +6,7 @@
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
   	<RootNamespace>Authomation.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+  	<ApplicationIcon>ImageSource\Icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,8 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="ImageSource\Icon.ico" />
     <Content Include="ImageSource\ServiceImage.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="JsonSettings\appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -50,6 +52,18 @@
     <Reference Include="GalaSoft.MvvmLight.Platform">
       <HintPath>C:\Users\sashu\.nuget\packages\mvvmlightlibsstd10\5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ImageSource\Icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ImageSource\Icon.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ImageSource\Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

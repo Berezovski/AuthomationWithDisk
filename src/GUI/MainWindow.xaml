@@ -9,8 +9,8 @@
         
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance local:MainwindowViewModel}"
-        Title="MainWindow" Height="800" Width="1200">
-
+        Title="Storage service" Height="800" Width="1200"
+        Icon=".\ImageSource\Icon.ico">
     <Window.Resources>
 
         <FontFamily x:Key="commonFont">Verdana</FontFamily>
